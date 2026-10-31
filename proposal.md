@@ -170,5 +170,4 @@ Catatan: Nama anggota dan PIC akan disesuaikan dengan anggota kelompok yang sebe
 
 Repository GitHub:
 
-URL: (Diisi setelah repository kelompok dibuat)
-
+URL: (https://github.com/herfimaulidya/pertemuan-14-perancangan-proyek-2225250129)
