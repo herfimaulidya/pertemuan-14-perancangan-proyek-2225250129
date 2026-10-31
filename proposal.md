@@ -74,62 +74,62 @@ MULAI
 
 1. Tampilkan menu pilihan bangun datar.
 2. Pengguna memilih jenis bangun datar.
-3. Jika pilihan tidak tersedia, tampilkan pesan kesalahan.
-4. Jika pilihan tersedia:
+3. Jika pilihan adalah 0, tampilkan pesan terima kasih dan akhiri program.
+4. Jika pilihan tidak tersedia, tampilkan pesan kesalahan dan kembali ke menu utama.
+5. Jika pilihan tersedia:
    - Minta input ukuran bangun datar.
    - Validasi input yang diberikan.
-   - Jika input tidak valid, tampilkan pesan kesalahan.
+   - Jika input tidak valid, tampilkan pesan kesalahan dan minta input kembali.
    - Jika input valid, hitung luas dan keliling sesuai rumus.
-5. Tampilkan hasil perhitungan.
-6. Tanyakan apakah pengguna ingin melakukan perhitungan kembali.
-7. Jika ya, kembali ke menu utama.
-8. Jika tidak, akhiri program.
+6. Tampilkan hasil perhitungan.
+7. Kembali ke menu utama.
 
 SELESAI
 
 ## 8. Struktur Program
 
-Program dibagi menjadi beberapa fungsi:
+Program dibagi menjadi beberapa fungsi dan modul:
 
-| Fungsi | Tanggung Jawab |
+| Fungsi/Modul | Tanggung Jawab |
 |---|---|
-| menu_utama() | Menampilkan menu pilihan bangun datar. |
+| tampilkan_menu() | Menampilkan menu pilihan bangun datar. |
 | hitung_persegi() | Menghitung luas dan keliling persegi. |
 | hitung_persegi_panjang() | Menghitung luas dan keliling persegi panjang. |
 | hitung_segitiga() | Menghitung luas dan keliling segitiga. |
 | hitung_lingkaran() | Menghitung luas dan keliling lingkaran. |
-| validasi_input() | Memeriksa input pengguna. |
+| validasi_input() | Memeriksa apakah input berupa angka positif. |
+| tampilkan_hasil() | Menampilkan hasil perhitungan luas dan keliling. |
+| minta_angka() | Meminta dan memvalidasi input ukuran dari pengguna. |
 | main() | Mengatur alur utama program. |
 
 **Struktur folder:**
 
 ```text
-proyek-kalkulator-geometri/
-├── README.md
-├── proposal.md
-├── .gitignore
+pertemuan-14-perancangan-proyek-2225250129/
 ├── data/
 │   └── data_contoh.txt
+├── output/
+│   └── .gitkeep
 ├── src/
-│   ├── main.py
 │   ├── geometri.py
+│   ├── main.py
 │   └── utilitas.py
 ├── tests/
-│   └── test_case.md
-└── output/
-    └── .gitkeep
-```
+│   ├── test_case.md
+│   └── bug_log.md
+├── .gitignore
+├── proposal.md
+└── README.md
 
 ## 9. Struktur Data
 
-Struktur data yang digunakan:
+Struktur data dan tipe data yang digunakan:
 
-- **Integer/Float:** Menyimpan ukuran bangun datar dan hasil perhitungan.
-- **String:** Menyimpan pilihan dan nama bangun datar.
-- **Dictionary:** Menyimpan hasil perhitungan luas dan keliling.
-- **List:** Menyimpan pilihan bangun datar yang tersedia.
+- **Float:** Menyimpan ukuran bangun datar dan hasil perhitungan.
+- **String:** Menyimpan pilihan menu dan input dari pengguna.
+- **Tuple:** Mengembalikan dua nilai berupa luas dan keliling dari fungsi perhitungan.
 
-Struktur data tersebut dipilih karena sesuai dengan kebutuhan pengolahan data dan perhitungan geometri.
+Struktur data tersebut digunakan untuk mendukung proses input, perhitungan, dan penampilan hasil program.
 
 ## 10. Test Case
 
@@ -138,24 +138,22 @@ Struktur data tersebut dipilih karena sesuai dengan kebutuhan pengolahan data da
 | TC01 | Normal | Persegi, sisi 5 | Luas 25 dan keliling 20 |
 | TC02 | Normal | Persegi panjang, panjang 8 dan lebar 4 | Luas 32 dan keliling 24 |
 | TC03 | Normal | Segitiga, alas 6, tinggi 4, sisi lainnya 5 dan 5 | Luas 12 dan keliling 16 |
-| TC04 | Normal | Lingkaran, jari-jari 7 | Luas sekitar 153,94 dan keliling sekitar 43,98 |
+| TC04 | Normal | Lingkaran, jari-jari 5 | Luas sekitar 78,54 dan keliling sekitar 31,42 |
 | TC05 | Batas | Persegi, sisi 0 | Ditolak karena ukuran harus positif |
 | TC06 | Invalid | Pilihan bangun datar tidak tersedia | Menampilkan pesan kesalahan |
 | TC07 | Invalid | Input ukuran berupa huruf | Menampilkan pesan kesalahan |
 
 ## 11. Pembagian Tugas
 
-Pembagian tugas dilakukan berdasarkan tanggung jawab setiap anggota kelompok.
+Proyek ini dikerjakan secara individu. Seluruh tahapan pengerjaan dilakukan oleh satu orang, mulai dari perencanaan, implementasi program, pengujian, hingga dokumentasi.
 
-| Peran | Tanggung Jawab |
-|---|---|
-| Koordinator | Mengatur proyek dan mengintegrasikan seluruh bagian. |
-| Programmer | Mengembangkan fungsi perhitungan geometri. |
-| Programmer | Mengembangkan menu dan validasi input. |
-| Tester/QA | Menyusun dan menguji test case. |
-| Dokumentasi | Menyusun proposal dan README. |
-
-Catatan: Nama anggota dan PIC akan disesuaikan dengan anggota kelompok yang sebenarnya.
+| No. | Tahapan | Tanggung Jawab |
+|---|---|---|
+| 1 | Perencanaan | Menyusun proposal dan rancangan proyek. |
+| 2 | Pemrograman | Mengembangkan fitur perhitungan geometri dan validasi input. |
+| 3 | Pengujian | Menyusun dan menjalankan test case serta mencatat hasil pengujian. |
+| 4 | Dokumentasi | Menyusun README, proposal, dan bug log. |
+| 5 | Pengelolaan Proyek | Mengelola repository dan riwayat perubahan menggunakan Git dan GitHub. |
 
 ## 12. Jadwal
 

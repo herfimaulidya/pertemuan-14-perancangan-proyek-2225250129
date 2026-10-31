@@ -12,43 +12,34 @@ Program ini dibuat sebagai proyek mata kuliah Algoritma dan Pemrograman, Program
 2. Menghitung luas dan keliling persegi panjang.
 3. Menghitung luas dan keliling segitiga.
 4. Menghitung luas dan keliling lingkaran.
-5. Memvalidasi input pengguna.
+5. Memvalidasi input berupa angka positif.
+6. Menangani pilihan menu yang tidak tersedia.
 
 ## Teknologi
 
-- Python
+- Python 3
 - Visual Studio Code
 - Git dan GitHub
+
+## Persyaratan
+
+- Python 3 sudah terinstal.
+- Git sudah terinstal.
 
 ## Struktur Folder
 
 ```text
-├── README.md
-├── proposal.md
-├── .gitignore
+pertemuan-14-perancangan-proyek-2225250129/
 ├── data/
+│   └── data_contoh.txt
+├── output/
+│   └── .gitkeep
 ├── src/
+│   ├── geometri.py
+│   ├── main.py
+│   └── utilitas.py
 ├── tests/
-└── output/
-```
-
-## Cara Menjalankan
-
-Program dijalankan melalui terminal menggunakan Python.
-
-Perintah menjalankan program:
-
-```bash
-py src/main.py
-```
-
-## Pengembang
-
-Mahasiswa S1 Pendidikan Matematika  
-FKIP Universitas Sultan Ageng Tirtayasa
-
-## Status Proyek
-
-Tahap perancangan proyek (Pertemuan 14).
-
-Implementasi program akan dilakukan pada Pertemuan 15.
+│   └── test_case.md
+├── .gitignore
+├── proposal.md
+└── README.md
