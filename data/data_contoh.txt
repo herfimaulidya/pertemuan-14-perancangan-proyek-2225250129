@@ -1,0 +1,6 @@
+# Data Contoh Kalkulator Geometri
+
+Persegi: sisi = 5
+Persegi Panjang: panjang = 8, lebar = 4
+Segitiga: alas = 6, tinggi = 4, sisi_a = 5, sisi_b = 5
+Lingkaran: jari_jari = 7
